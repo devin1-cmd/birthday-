@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 💜</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+  background: linear-gradient(120deg, #6a11cb, #2575fc);
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-box {
+  background-color: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  z-index: 2;
+  max-width: 700px;
+  animation: fadeUp 2s ease;
+}
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.sparkle {
+  font-weight: 700;
+  background: linear-gradient(90deg, #fff 20%, #ffdee9 40%, #fff 60%, #ffdee9 80%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: sparkleText 3s linear infinite;
+}
+@keyframes sparkleText {
+  0% {background-position: 200% 0;}
+  100% {background-position: -200% 0;}
+}
+
+.floating-hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+.floating-hearts span {
+  position: absolute;
+  bottom: -50px;
+  width: 15px;
+  height: 15px;
+  background: rgba(255,192,203,0.7);
+  border-radius: 50%;
+  animation: rise 10s linear infinite;
+}
+@keyframes rise {
+  0% {transform: translateY(0) rotate(0deg);}
+  100% {transform: translateY(-1100px) rotate(360deg);}
+}
+
+.floating-texture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.1), transparent 70%),
+              radial-gradient(circle at bottom right, rgba(255,255,255,0.1), transparent 70%);
+  animation: moveBg 10s linear infinite alternate;
+  z-index: 0;
+}
+@keyframes moveBg {
+  from {background-position: 0 0, 100% 100%;}
+  to {background-position: 100% 0, 0 100%;}
+}
+
+.orbit-container {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.orbit-photo {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.6);
+  transition: transform 0.5s;
+}
+.orbit-photo:hover {
+  transform: scale(1.2);
+}
+
+.orbit1 { animation: orbit 12s linear infinite; transform-origin: 250px 250px; }
+.orbit2 { animation: orbit 14s linear infinite reverse; transform-origin: 250px 250px; }
+.orbit3 { animation: orbit 16s linear infinite; transform-origin: 250px 250px; }
+.orbit4 { animation: orbit 18s linear infinite reverse; transform-origin: 250px 250px; }
+.orbit5 { animation: orbit 20s linear infinite; transform-origin: 250px 250px; }
+
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+/* Music toggle button */
+#musicToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+  font-size: 24px;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#musicToggle:hover {
+  background: rgba(255,255,255,1);
+}
+</style>
+</head>
+<body>
+
+<div class="floating-texture"></div>
+
+<div class="floating-hearts">
+  <span style="left:5%; animation-delay:0s;"></span>
+  <span style="left:15%; animation-delay:2s;"></span>
+  <span style="left:25%; animation-delay:4s;"></span>
+  <span style="left:35%; animation-delay:1s;"></span>
+  <span style="left:45%; animation-delay:3s;"></span>
+  <span style="left:55%; animation-delay:5s;"></span>
+  <span style="left:65%; animation-delay:0.5s;"></span>
+  <span style="left:75%; animation-delay:2.5s;"></span>
+  <span style="left:85%; animation-delay:4.5s;"></span>
+  <span style="left:95%; animation-delay:1.5s;"></span>
+</div>
+
+<audio id="myAudio" preload="auto" loop>
+  <source src="Palagi - TJ Monterde (Lyric Video) _ @dhorynmarimon [908773h7OAM].mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div class="main-content">
+  <div class="message-box">
+    <h1 class="sparkle mb-4">💜 Happy Birthday To You! 💜</h1>
+    <p class="lead">
+      Today isn’t just another day — it’s <strong>your day</strong>.  
+      A day where the world pauses to celebrate someone truly special.  
+      You’ve brought light, laughter, and warmth into so many hearts, and today,  
+      it’s time for all that love to return to you a thousand times over. 💫
+    </p>
+    <p>
+      May your dreams be as beautiful as the stars above.  
+      May your heart always stay full of kindness, your smile never fade,  
+      and your life overflow with blessings beyond measure. 🌸  
+      You deserve nothing less than happiness, peace, and endless love.
+    </p>
+    <p class="fw-semibold">
+      Keep shining — keep being the amazing person that you are.  
+      The world is brighter because you exist. 💖
+    </p>
+    <h4 class="mt-4 sparkle">🎁 Cheers to another year of YOU — unstoppable, incredible, and loved! 🎂</h4>
+  </div>
+</div>
+
+<div class="orbit-container">
+  <img src="Messenger_creation_A27E21EA-97AD-45B9-BFF0-E9CB0574E7A4.jpeg" class="orbit-photo orbit1">
+  <img src="IMG_20251006_173532_691.jpg" class="orbit-photo orbit2">
+  <img src="IMG_20251006_173532_691.jpg" class="orbit-photo orbit3">
+  <img src="Messenger_creation_8832A6EB-44A5-4602-8BD2-E88FDCB9E18C.jpeg" class="orbit-photo orbit4">
+  <img src="IMG_20251006_173532_691.jpg" class="orbit-photo orbit5">
+</div>
+
+<!-- Music toggle button -->
+<button id="musicToggle" title="Play/Pause Music">⏸️</button>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+const audio = document.getElementById("myAudio");
+const musicToggle = document.getElementById("musicToggle");
+
+// Try autoplay after slight delay
+setTimeout(() => { audio.play().catch(e => console.log(e)); }, 1000);
+
+// Ensure audio plays on user interaction (click)
+document.addEventListener('click', () => audio.play());
+
+// Toggle button functionality
+musicToggle.addEventListener('click', () => {
+  if(audio.paused){
+    audio.play();
+    musicToggle.textContent = "⏸️";
+  } else {
+    audio.pause();
+    musicToggle.textContent = "▶️";
+  }
+});
+
+// Confetti
+function launchConfetti() {
+  confetti({ particleCount: 200, spread: 150, origin: { y: 0.6 } });
+}
+setInterval(launchConfetti, 3000);
+launchConfetti();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
